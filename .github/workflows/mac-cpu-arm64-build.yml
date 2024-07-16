@@ -1,11 +1,6 @@
 name: "MacOS CPU ARM64 Build"
 on:
   workflow_dispatch:
-  push:
-    branches:
-    - main
-    - rel-*
-  pull_request:
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
